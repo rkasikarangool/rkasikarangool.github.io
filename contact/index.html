@@ -1,0 +1,77 @@
+<!--ALL IMAGES USED FOR EXPERIENCES AND HOME PAGE TAKEN FROM https://unsplash.com/ AND ARE FREE USE, LOGO CREATED BY CHATGPT-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Emerald Escapes - Contact Us</title>
+	<link rel="icon" type="image/png" href="../images/emeraldescapelogo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+	<div class="container">
+		<!--Navigation bar-->
+		<div class="menu">
+			<nav>
+				<img src="../images/emeraldescapelogo.png" alt="Emerald Escapes logo">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="../experiences/index.html">Experiences</a></li>
+					<li><a href="#" class="active">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<!--Contact and Booking Form-->
+		<main class="contact-wrapper">
+			<div class="contact-header">
+				<h1>Contact Us</h1>
+				<p>Have a question about a trip or want to make a booking? Send us a message below.</p>
+			</div>
+
+			<section class="contact-card">
+				<form id="myForm" onsubmit="formChecker(event)">
+					<!--Name-->
+					<div class="form-group">
+						<label for="formName">Name</label>
+						<input type="text" id="formName" name="formName" placeholder="Your full name">
+					</div>
+
+					<!--Email-->
+					<div class="form-group">
+						<label for="formEmail">Email</label>
+						<input type="text" id="formEmail" name="formEmail" placeholder="name@example.com">
+					</div>
+
+					<!--Phone Number-->
+					<div class="form-group">
+						<label for="formPhone">Phone</label>
+						<input type="text" id="formPhone" name="formPhone" placeholder="0871234567">
+					</div>
+
+					<!--Query Type-->
+					<div class="form-group">
+						<label for="formQuery">Topic</label>
+						<select id="formQuery" name="formQuery">
+							<option value="">Choose a topic</option>
+							<option value="Booking">Booking</option>
+							<option value="Payment">Payment</option>
+							<option value="General Information">General Information</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+
+					<!--Message-->
+					<div class="form-group">
+						<label for="formMessage">Message</label>
+						<textarea id="formMessage" name="formMessage" rows="5" placeholder="Write your message here (at least 20 characters)..."></textarea>
+					</div>
+
+					<button type="submit" class="submit-btn">Send Message</button>
+				</form>
+			</section>
+		</main>
+	</div>
+	<script src="../script.js"></script>
+</body>
+</html>

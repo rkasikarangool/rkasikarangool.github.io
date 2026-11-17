@@ -1,0 +1,340 @@
+<!--ALL IMAGES USED FOR EXPERIENCES AND HOME PAGE TAKEN FROM https://unsplash.com/ AND ARE FREE USE, LOGO CREATED BY CHATGPT-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Emerald Escapes - Experiences</title>
+	<link rel="icon" type="image/png" href="../images/emeraldescapelogo.png">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+	<body>
+		<div class="container">
+			<!--Navigation bar-->
+			<div class="menu">
+				<nav>
+					<img src="../images/emeraldescapelogo.png" alt="Emerald Escapes logo">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="#" class="active">Experiences</a></li>
+						<li><a href="../contact/index.html">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!--Experience Page-->
+			<main class="experiences-page">
+				<div class="experiences-header">
+					<h1>Our Experiences</h1>
+					<p>Pick your next trip in Ireland, from city breaks to outdoor adventures.</p>
+				</div>
+
+				<!--Filter bar-->
+				<section class="filters-container">
+					<div class="filters-grid">
+						<div class="filter-group">
+							<label for="category">Category</label>
+							<select id="category">
+								<option value="all">All</option>
+								<option value="favourite">Favourites Only</option>
+								<option value="coastal">Coastal</option>
+								<option value="city">City Breaks</option>
+								<option value="adventure">Adventure</option>
+								<option value="heritage">Heritage and Culture</option>
+							</select>
+						</div>
+
+						<div class="filter-group">
+							<label for="price-filter">Price</label>
+							<select id="price-filter">
+								<option value="all">All prices</option>
+								<option value="under-25">Under €25</option>
+								<option value="25-50">€25 - €50</option>
+								<option value="over-50">Over €50</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="filters-footer">
+						<span id="results-count">Showing 15 of 15 experiences</span>
+					</div>
+				</section>
+
+				<!--Experiences card grid-->
+				<section class="experiences-grid" id="experiences-grid">
+					<!--Card 1-->
+					<article class="exp-card heritage">
+						<div class="card-media">
+							<img src="../images/burren.jpg" alt="Wildflowers and rocks in The Burren">
+							<span class="card-badge">Heritage</span>
+							<span class="card-price-tag">€19</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Clare</div>
+							<h3>The Burren Stone and Flower Walk</h3>
+							<p>Walk across rocky limestone hills, see ancient stone tombs, and spot rare wildflowers with a local guide.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 3 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 2-->
+					<article class="exp-card city">
+						<div class="card-media">
+							<img src="../images/dublin.jpg" alt="Old stone building in Dublin">
+							<span class="card-badge">City Break</span>
+							<span class="card-price-tag">€165</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Dublin</div>
+							<h3>Dublin Books and Whiskey Weekend</h3>
+							<p>Stay in a quiet townhouse near Merrion Square, visit old libraries, and enjoy a guided whiskey tasting.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2 days</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 3-->
+					<article class="exp-card adventure">
+						<div class="card-media">
+							<img src="../images/killarney.jpg" alt="Lakes and mountains in Killarney">
+							<span class="card-badge">Adventure</span>
+							<span class="card-price-tag">€195</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Kerry</div>
+							<h3>Killarney Lakes and Gap of Dunloe Trip</h3>
+							<p>Ride through the mountain pass, cross the Killarney lakes by boat, and stay overnight in Killarney town.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2 days</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 4-->
+					<article class="exp-card coastal">
+						<div class="card-media">
+							<img src="../images/connemara.jpg" alt="Water and mountains in Connemara">
+							<span class="card-badge">Coastal</span>
+							<span class="card-price-tag">€42</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Galway</div>
+							<h3>Killary Fjord Boat Cruise and Lunch</h3>
+							<p>Take a boat ride through Ireland's only fjord surrounded by steep hills and taste fresh local mussels.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: Half day</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 5-->
+					<article class="exp-card coastal">
+						<div class="card-media">
+							<img src="../images/puffin.jpg" alt="Puffin standing on coastal rocks">
+							<span class="card-badge">Coastal</span>
+							<span class="card-price-tag">€125</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Antrim</div>
+							<h3>Rathlin Island Puffin and Lighthouse Trip</h3>
+							<p>Take the ferry from Ballycastle to see puffins on the cliffs, visit the lighthouse, and stay on the island.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2 days</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 6-->
+					<article class="exp-card adventure">
+						<div class="card-media">
+							<img src="../images/kilkenny.jpg" alt="River Nore in Kilkenny at sunset">
+							<span class="card-badge">Adventure</span>
+							<span class="card-price-tag">€36</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Kilkenny</div>
+							<h3>River Nore Sunset Kayak Trip</h3>
+							<p>Paddle under old stone bridges and past Kilkenny Castle on a calm evening kayak tour.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2.5 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 7-->
+					<article class="exp-card coastal">
+						<div class="card-media">
+							<img src="../images/galway.jpg" alt="Rocky coast and clear water in Galway">
+							<span class="card-badge">Coastal</span>
+							<span class="card-price-tag">€21</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Galway City</div>
+							<h3>Salthill Shore Walk and Seaweed Tour</h3>
+							<p>Walk along Galway Bay with a local guide to learn about edible seaweeds and rockpool wildlife.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2.5 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 8-->
+					<article class="exp-card adventure">
+						<div class="card-media">
+							<img src="../images/kerry-night.jpg" alt="Night sky in County Kerry">
+							<span class="card-badge">Adventure</span>
+							<span class="card-price-tag">€260</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Kerry</div>
+							<h3>Kerry Coast Stargazing Camp</h3>
+							<p>Spend two nights on the Kerry coast with guided telescope stargazing and daytime cliff walks.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 3 days</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 9-->
+					<article class="exp-card heritage">
+						<div class="card-media">
+							<img src="../images/powerscourt.jpg" alt="Powerscourt Waterfall in Wicklow">
+							<span class="card-badge">Heritage</span>
+							<span class="card-price-tag">€32</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Wicklow</div>
+							<h3>Powerscourt Waterfall and Gardens</h3>
+							<p>Walk through the historic estate gardens and enjoy a picnic beside Ireland's highest waterfall.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: Half day</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 10-->
+					<article class="exp-card city">
+						<div class="card-media">
+							<img src="../images/howth.jpg" alt="Cliffs and sea at Howth">
+							<span class="card-badge">City Break</span>
+							<span class="card-price-tag">€17</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Dublin</div>
+							<h3>Howth Cliff Walk and Seal Spotting</h3>
+							<p>Follow the coastal trail around Howth Head for views of Dublin Bay and spot grey seals by the pier.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 3 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 11-->
+					<article class="exp-card coastal">
+						<div class="card-media">
+							<img src="../images/cork.jpg" alt="Harbour buildings in County Cork">
+							<span class="card-badge">Coastal</span>
+							<span class="card-price-tag">€155</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Cork</div>
+							<h3>West Cork Whale Watch and Cape Clear</h3>
+							<p>Sail from Baltimore harbour to look for whales and dolphins, with an overnight stay on Cape Clear Island.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2 days</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 12-->
+					<article class="exp-card adventure">
+						<div class="card-media">
+							<img src="../images/donegal.jpg" alt="Mountain ridge in County Donegal">
+							<span class="card-badge">Adventure</span>
+							<span class="card-price-tag">€46</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Donegal</div>
+							<h3>Mount Errigal Sunrise Hike</h3>
+							<p>Climb Donegal's most famous mountain at sunrise with a guide for wide views over the valleys below.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 4 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 13-->
+					<article class="exp-card heritage">
+						<div class="card-media">
+							<img src="../images/mayo.jpg" alt="Rocky coast near Westport">
+							<span class="card-badge">Heritage</span>
+							<span class="card-price-tag">€23</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Mayo</div>
+							<h3>Westport House and Quay Walk</h3>
+							<p>Tour the historic house linked to Grace O'Malley and enjoy a guided walk along Westport harbour.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 2.5 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 14-->
+					<article class="exp-card city">
+						<div class="card-media">
+							<img src="../images/belfast.jpg" alt="Belfast river and skyline">
+							<span class="card-badge">City Break</span>
+							<span class="card-price-tag">€44</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Belfast</div>
+							<h3>Belfast Market and Street Food Tour</h3>
+							<p>Sample local breads, Ulster fry bites, and craft cider with a local guide at St. George's Market.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 3 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+
+					<!--Card 15-->
+					<article class="exp-card coastal">
+						<div class="card-media">
+							<img src="../images/waterford.jpg" alt="Waterford coast and cliffs">
+							<span class="card-badge">Coastal</span>
+							<span class="card-price-tag">€15</span>
+						</div>
+						<div class="card-content">
+							<div class="card-county">Co. Waterford</div>
+							<h3>Waterford Greenway Bike Ride</h3>
+							<p>Cycle along the traffic-free coastal path over old railway bridges with sea views of Dungarvan Bay.</p>
+						</div>
+						<div class="card-footer">
+							<span class="duration">Duration: 3 hours</span>
+							<button type="button" class="fav-btn" onclick="toggleFavourite(this)">Save</button>
+						</div>
+					</article>
+				</section>
+			</main>
+		</div>
+
+		<script src="../script.js"></script>
+	</body>
+	</html>
